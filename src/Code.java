@@ -35,10 +35,7 @@ public class Code {
          codda[count-1]=codda[0];
          codda[0]=num;
      }
-
-
              count++;
-     count2++;
 
     }
 
