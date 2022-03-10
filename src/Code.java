@@ -2,8 +2,8 @@ import java.util.Arrays;
 
 public class Code {
     private int[] codda;
-    private int count = 0;
-    private int count2;
+    private int count =0;
+    private int count2 =1;
 
 
 
@@ -21,19 +21,24 @@ public class Code {
 
 
     public void inCoda(int num){
-     if (count==5){
+
+        if (count==5){
          count=0;
      }
-     if (count==0){
-         codda[count]= num;
-     }
-             if (count>=1){
+        if (count==0){
+            codda[0]=num;
+        }
 
-                 codda[count]=codda[count-1];
-                 codda[count-1]=num;
 
+     if (count>0){
+         codda[count]=codda[count-1];
+         codda[count-1]=codda[0];
+         codda[0]=num;
      }
+
+
              count++;
+     count2++;
 
     }
 
